@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="category-select">
+        <mat-accordion #accordion="matAccordion" [multi]="true">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <!-- 選択されたカテゴリー名 -->
+                    <mat-panel-title>
+                        <p>{{getSelectCatelgory()}}</p>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                    <!-- カテゴリーリスト -->
+                <div class="category-scroll">
+                    <mat-nav-list>
+                        <a mat-list-item appLinkstyle brown="" white="#E4C18F" (click)="onChangeCategory('list')" (click)="accordion.closeAll()">
+                            <div>一覧</div>
+                        </a>
+                        <a *ngFor="let category of getCategoryArry()" mat-list-item appLinkstyle brown="" white="#E4C18F" 
+                        (click)="onChangeCategory(category.category)" (click)="accordion.closeAll()">
+                            <div>{{category.category}}</div>
+                        </a>
+                    </mat-nav-list>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <table>
+        <tr>
+            <th style="width: 175px">カテゴリー</th>
+            <th style="width: 500px">タイトル</th>
+            <th style="width: 175px">所在</th>
+        </tr>
+        <tr *ngFor="let bookData of getBookList()" appLinkStyle brown="" white="#E4C18F" (click)="onClick(bookData)">
+            <td>{{bookData.categoryId}}</td>
+            <td>{{bookData.bookTitle}}</td>
+            <td>{{bookData.location}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <a [routerLink]="['../booklist']" [queryParams]="{section : getMoveData('section')}">書籍選択画面へ戻る</a>
+    <div class="card">
+        <mat-card>
+            <mat-card-title>
+                貸出カード
+                <span class="material-icons" (click)="onEdit()">
+                    mode
+                </span>
+            </mat-card-title>
+            <mat-card-content>
+                <img *ngIf="getMoveData('image') != 'assets/image/book1.png'" src="{{getMoveData('image')}}">
+                <img *ngIf="getMoveData('image') == 'assets/image/book1.png'" src="assets/image/bookIcon.png" style="border:none;">
+                <div class="book-data">
+                    <p style="text-align: left;">{{getMoveData("title")}}</p>
+                    <p>所在{{"　" + getMoveData("location")}}</p>
+                </div>
+            </mat-card-content>
+            <button appLinkStyle brown="#6A4D32" white="white" (click)="onDLog('rent')">借りる</button>
+        　　<button appLinkStyle brown="#6A4D32" white="white" (click)="onDLog('return')">返す</button>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="regist">
+        <div class="title"><div>新規登録</div></div>
+        <div class="box">
+            <img *ngIf="image != defaulteImgUrl" [ngStyle]="imgStyle" src="{{image}}">
+            <img *ngIf="image == defaulteImgUrl" [ngStyle]="defaulteImgStyle" src="{{image}}">
+            <form [formGroup]="formGroup" (submit) = "onClick()">
+                <div class="error">{{errorMsg}}</div>
+                <table>
+                    <tr>
+                        <th><span>●大カテゴリー</span></th>
+                        <td>
+                            <select formControlName="section" (change)="onSectionChange()" [(ngModel)]="selectSection">
+                                <option disabled="disabled" [selected]="selectSection == '選択してください'">選択してください</option>
+                                <option *ngFor="let sectionData of sectionList" value="{{sectionData.sectionId.id}}">{{sectionData.sectionId.section}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><span>●小カテゴリー</span></th>
+                        <td>
+                            <select formControlName="category" [(ngModel)]="selectCategory">
+                                <option disabled="disabled" [selected]="selectCategory == '先に大カテゴリーを選択してください'">先に大カテゴリーを選択してください</option>
+                                <option *ngFor="let list of categoryList" value="{{list.id}}">{{list.category}}</option>
+                            </select>
+                        </td>
+                    </tr>
+                   <tr><th><span>●ISBNコード</span></th><td><input type="text" formControlName="isbnCode" (blur)="onBlur()"></td></tr>
+
+                   <tr>
+                       <th><span>●タイトル</span></th>
+                       <td ><input type="text" formControlName="title" [(ngModel)]="title"></td>
+                    </tr>
+                   <tr><th><span>●書籍の所在地</span></th><td><input type="text" formControlName="location" placeholder="オフィス or 社員名"></td></tr>
+                </table>
+                <!-- <input type="hidden" formContronName="title"> -->
+                <input type="submit" value="登録" appLinkStyle brown="#6A4D32" white="white">
+            </form>
+        </div>
+    </div>
+</div>

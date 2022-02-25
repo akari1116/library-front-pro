@@ -1,0 +1,48 @@
+.container {justify-content: center;}
+/* カテゴリーリスト */
+.category-select {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0px 0px 100px 0px;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #999;
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+mat-expansion-panel {
+    width: 315px;
+    margin:0px;
+    position: absolute;
+    padding: 0px;
+}
+.category-scroll {
+    height: 200px;
+    overflow-y: scroll;
+    /* padding-left: 5px; */
+    padding-right: 10px;
+}
+div {
+    color: black;
+}
+/* 書籍一覧テーブル */
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+tr {
+    background-color: white;
+}
+tr th {
+    background-color: #6A4D32;
+    padding: 20px;
+    color: white;
+}
+tr td {
+    padding: 15px;
+    color:black;
+}

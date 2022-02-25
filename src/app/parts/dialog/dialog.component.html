@@ -1,0 +1,19 @@
+<mat-dialog-content style="height:250px;">
+    <div class="regist" *ngIf="data.display == 'regist'">
+    <p>{{data.dLogMessage}}</p>
+      <button appLinkStyle brown="#6A4D32" white="white" (click)="cancel()">OK</button>
+    </div>
+  　<div class="input" *ngIf="data.display == 'input'">
+      <p  style="margin: 30px 0px;">{{data.dLogMessage}}</p>
+      <form style="margin-bottom:50px">
+        <input type="text" [formControl] = "formControl">
+      </form>
+    <div>
+        <button *ngIf="formControl.invalid" appLinkStyle brown="lightgray" white="white"
+         [disabled]="formControl.invalid" >登録</button>
+        <button *ngIf="!formControl.invalid" appLinkStyle brown="#6A4D32" white="white"
+         (click)="registName()" [mat-dialog-close] = "data">登録</button>
+        <button appLinkStyle brown="#6A4D32" white="white" (click)="cancel()">キャンセル</button>
+      </div>
+    </div> 
+</mat-dialog-content>

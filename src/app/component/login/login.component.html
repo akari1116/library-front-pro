@@ -1,0 +1,14 @@
+<div class="box">
+    <div class="login">
+      <h3><div>WEB本棚・ログイン</div></h3>
+      <form [formGroup]="formGroup" (ngSubmit)="login()">
+        <img src="assets/image/login.png">
+        <div class="error">{{errorMsg}}</div>
+        <table>
+          <tr><th>●メールアドレス</th><td><input type="text" formControlName="mail"></td></tr>
+          <tr><th>●パスワード</th><td><input type="password" formControlName="password" [(ngModel)] = "password"></td></tr>
+        </table>
+        <div><input type="submit" value="ログイン" appLinkStyle brown="#6A4D32" white="white"></div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,82 @@
+.container { 
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+header {
+    background-color: #6A4D32;
+    height: 70px;
+    text-align: center;
+    margin-bottom: 100px
+}
+.navigate{
+    padding-top: 30px;
+}
+nav a { 
+    margin: 20px 40px;
+    padding: 10px 20px;
+}
+footer {
+    background-color: #6A4D32;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+.login {
+    max-width: 960px;
+    margin: 100px auto;
+    background-color: white;
+    width: 500px;
+    padding: 10px 50px 40px 50px;
+    color: #6A4D32;
+}
+h3 div {
+    font-size: 18px;
+    background-color:#6A4D32;
+    padding: 20px 20px 20px 20px;
+    color: white;
+}
+form {
+    border-bottom: solid 3px #6A4D32;
+    padding: 20px 0px 20px 0px;
+}
+img {
+    width: 90px;
+    height: 90px;
+}
+.error {
+    font-size: 15px;
+    color: red;
+}
+table {
+    margin: 0px 60px;
+}
+tr th {
+    text-align: left;
+    padding-right: 30px;
+}
+input[type="text"] { 
+    height: 2em;
+    font-size: 16px;
+}
+input[type="password"] { 
+    height: 2em;
+    font-size: 16px;
+}
+input[type="submit"] {
+    width: 100px;
+    height: 50px;
+    border: #6A4D32;
+    border-radius: 0px;
+    margin: 10px 0px 20px 0px;
+}
+.login div {
+    margin-top: 30px;
+}

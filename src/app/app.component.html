@@ -1,0 +1,14 @@
+<div class="container">
+  <header>
+    <nav *ngIf="loginValue != false">
+      <div class="navigate">
+        <a routerLink="" appLinkStyle brown="#6A4D32" white="white">トップページ</a>
+        <a routerLink="bookregist" appLinkStyle brown="#6A4D32" white="white">書籍登録</a>
+        <a routerLink="top" appLinkStyle brown="#6A4D32" white="white">ログアウト</a>
+      </div>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+  <footer>
+  </footer>
+</div>
