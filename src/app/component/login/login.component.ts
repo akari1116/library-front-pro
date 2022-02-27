@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     //ローカルストレージにトークンがあればトップ画面へ遷移
-    if(localStorage.getItem("Authorization") != null) {
+    if(sessionStorage.getItem("Authorization") != null) {
       this.router.navigate([""]);
     }
 

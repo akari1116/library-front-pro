@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
   ngOnInit() {
 
     //ローカルストレージにトークンがなければログイン画面へ遷移
-    if(localStorage.getItem("Authorization") == null) {
+    if(sessionStorage.getItem("Authorization") == null) {
       this.loginValue = false;
       this.router.navigate(["login"]);
     }

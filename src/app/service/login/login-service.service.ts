@@ -68,7 +68,7 @@ export class LoginServiceService {
 
     let token  = res.headers.get('Authorization');
     if(token != null) {
-      localStorage.setItem("Authorization", token);
+      sessionStorage.setItem("Authorization", token);
     }
   }
 

@@ -22,7 +22,7 @@ export class CategoryService {
   private httpOptions: any = {
     headers: new HttpHeaders({
       "Content-Type" : ApiConf.httpOption.contentType,
-      "Authorization" : localStorage.getItem(ApiConf.httpOption.Auth)!
+      "Authorization" : sessionStorage.getItem(ApiConf.httpOption.Auth)!
     }),
     "observe": ApiConf.httpOption.observe,
     "body": ApiConf.httpOption.body

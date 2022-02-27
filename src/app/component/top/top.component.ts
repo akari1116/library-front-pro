@@ -23,7 +23,7 @@ export class TopComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    if(localStorage.getItem("Authorization") == null) {
+    if(sessionStorage.getItem("Authorization") == null) {
       this.router.navigate(["login"]);
     }
 

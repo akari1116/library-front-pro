@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/library-front",
+    "public": "dist/library-front-pro",
     "ignore": [
       "firebase.json",
       "**/.*",
