@@ -85,7 +85,7 @@ export class BookViewComponent implements OnInit {
     //ダイアログへのデータセット
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '400px',
-      data: { name:"?", dLogMessage:dLogMessage, display:display, section:jsonBook.section}
+      data: { name:"?", dLogMessage:dLogMessage, display:display, section:jsonBook.section, url:"booklist"}
     });
 
     //ダイアログ呼び出し

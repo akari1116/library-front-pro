@@ -32,6 +32,7 @@ export class DialogComponent implements OnInit {
 
   cancel() {
     if(this.data.dLogMessage == "登録しました。") {
+      console.log("ああああ");
       this.router.navigate([this.data.url], { queryParams:{ 'section':this.data.section}});
     }
     this.dialogRef.close();
