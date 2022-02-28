@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from 'src/app/parts/dialog/dialog.component';
 
 
 
@@ -19,7 +21,7 @@ export class AppComponent implements OnInit{
   auth:any;
   eventData : string = "";
 
-  constructor(private router:Router) {}
+  constructor(private router:Router, private dialog:MatDialog) {}
 
   ngOnInit() {
 
@@ -28,6 +30,18 @@ export class AppComponent implements OnInit{
       this.loginValue = false;
       this.router.navigate(["login"]);
     }
+  }
+
+  onClick() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '400px',
+      data: { name:"?", dLogMessage:"ログアウトしました。", display:"regist", section:"", url:"login"}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      sessionStorage.clear();
+      this.router.navigate(['login']);
+    });
   }
 }
 

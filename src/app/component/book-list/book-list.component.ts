@@ -39,7 +39,6 @@ export class BookListComponent implements OnInit {
     //カテゴリーリスト取得
     this.asyncCategoryArry(sectionId);
     //指定された大区分の書籍リスト取得
-    console.log("データ" + sectionId)
     this.asyncBookDataArry(sectionId);
     
   }
